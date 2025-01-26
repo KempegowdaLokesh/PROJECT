@@ -1,0 +1,177 @@
+/* General Container */
+.cast-details-container {
+    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e3e3e3); /* Subtle gradient for modern feel */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced depth */
+    max-width: 1200px;
+    margin: 30px auto;
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Cast Information Section */
+.cast-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Gap between image and text */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Adjust for smaller screens */
+}
+
+/* Cast Image */
+.cast-info img {
+    width: 25%;
+    max-width: 350px; /* Restrict max size */
+    height: 55vh;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cast-info img:hover {
+    transform: scale(1.1); /* Smooth zoom effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Shadow increases on hover */
+}
+
+/* Cast Details Text */
+.cast-details {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.cast-details h1 {
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 3px solid #ff4500; /* Underline effect */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.cast-details p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cast-details .highlight {
+    color: #ff4500; /* Highlighted text color */
+    font-weight: bold;
+}
+
+/* Related Movies Section */
+.related-movies {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.related-movies h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.related-movies h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #ff4500;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
+}
+
+/* Related Movies List */
+.related-movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Related Movie Item */
+.related-movie-item {
+    cursor: pointer;
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-movie-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-movie-item img:hover {
+    transform: translateY(-5px) scale(1.05); /* Float effect */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.related-movie-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.related-movie-item p:hover {
+    color: #ff4500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cast-info {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .cast-info img {
+        margin-bottom: 20px;
+    }
+
+    .cast-details {
+        max-width: 100%;
+    }
+
+    .related-movie-item {
+        width: 140px; /* Adjust movie card size */
+    }
+}
+
+@media (max-width: 768px) {
+    .cast-details h1 {
+        font-size: 2rem;
+    }
+
+    .related-movies h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

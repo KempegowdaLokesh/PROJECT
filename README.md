@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 Live Demo - 
 https://kempegowdalokesh.github.io/PROJECT/
+
+LIVE DEMO - lokesh-movieproject.netlify.app by netlify
